@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { Providers } from "./providers";
@@ -187,6 +188,7 @@ export default function RootLayout({
           <Parallax>
             <Header />
             {children}
+            <Analytics />
           </Parallax>
         </Providers>
         <Script
