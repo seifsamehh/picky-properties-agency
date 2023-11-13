@@ -24,7 +24,7 @@ export default function About() {
           ABOUT US
         </h2>
       </ScrollParallax>
-      <p className="leading-[3rem] max-w-5xl text-center text-4xl relative z-10">
+      <p className="leading-[3rem] max-w-5xl text-center min-[290px]:text-2xl md:text-4xl relative z-10">
         We are part of byotat real estate. Byotat is a leading companyin thhe
         field of real estate marketing. Projects marketing and marketing
         consultancy.
