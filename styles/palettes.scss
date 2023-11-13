@@ -1,0 +1,100 @@
+// Light Mode Palette
+$primary-background-light: #caf0f8;
+$primary-text-light: #03045e;
+$accent-1-light: #0077b6;
+$accent-2-light: #00b4d8;
+$accent-3-light: #90e0ff;
+
+// Dark Mode Palette
+$primary-background-dark: #03045e;
+$primary-text-dark: #caf0f8;
+$accent-1-dark: #0077b6;
+$accent-2-dark: #00b4d8;
+$accent-3-dark: #90e0ff;
+
+@mixin light-mode {
+  background-color: $primary-background-light;
+  color: $primary-text-light;
+  // Add more styles as needed
+}
+
+@mixin dark-mode {
+  background-color: $primary-background-dark;
+  color: $primary-text-dark;
+  // Add more styles as needed
+}
+
+.light {
+  @include light-mode;
+  .loading {
+    background-color: $primary-background-dark;
+    svg {
+      stroke: $primary-text-dark;
+    }
+  }
+  .nav {
+    background-color: #ffffff;
+    p {
+      color: $primary-text-light;
+    }
+  }
+  .primary-button {
+    background-color: $accent-1-light;
+    color: white;
+
+    &:hover {
+      background-color: darken($accent-1-light, 10%);
+      // Add more hover styles as needed
+    }
+  }
+  .secondary-button {
+    background-color: $accent-2-light;
+    color: $primary-background-dark;
+
+    &:hover {
+      background-color: darken($accent-2-light, 10%);
+      // Add more hover styles as needed
+    }
+  }
+  ::selection {
+    background-color: $primary-background-dark;
+    color: $primary-text-dark;
+  }
+}
+.dark {
+  @include dark-mode;
+  .loading {
+    background-color: $primary-background-light;
+    svg {
+      stroke: $primary-text-light;
+    }
+  }
+  .nav {
+    background-color: #ffffff;
+    p {
+      color: $primary-text-light;
+    }
+  }
+  .primary-button {
+    background-color: $accent-1-dark;
+    color: white;
+
+    &:hover {
+      background-color: darken($accent-1-dark, 10%);
+      // Add more hover styles as needed
+    }
+  }
+  .secondary-button {
+    background-color: $accent-2-dark;
+    color: $primary-background-light;
+
+    &:hover {
+      background-color: darken($accent-2-dark, 10%);
+      // Add more hover styles as needed
+    }
+  }
+  ::selection {
+    background-color: $primary-background-light;
+    color: $primary-text-light;
+  }
+}
