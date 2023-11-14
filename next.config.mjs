@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
-// const nextConfig = {}
-
-// module.exports = nextConfig
+/**
+ * @type {import('next').NextConfig}
+ */
 import withPWA from "@ducanh2912/next-pwa";
 
 const nextConfig = {
+  /* config options here */
   dest: "public",
   cacheOnFrontEndNav: true,
   aggressiveFrontEndNavCaching: true,

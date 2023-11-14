@@ -33,9 +33,26 @@ $accent-3-dark: #90e0ff;
     }
   }
   .nav {
-    background-color: #ffffff;
+    background-color: $primary-background-light;
     p {
       color: $primary-text-light;
+    }
+  }
+  .title {
+    .headings {
+      h2 {
+        font-size: 15rem;
+        line-height: 10rem;
+        color: $primary-text-light;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: $primary-text-light;
+        @media screen and (max-width: 991px) {
+          -webkit-text-stroke-width: 2px;
+          font-size: 3.5rem;
+          line-height: 4rem;
+        }
+      }
     }
   }
   .primary-button {
@@ -70,9 +87,26 @@ $accent-3-dark: #90e0ff;
     }
   }
   .nav {
-    background-color: #ffffff;
+    background-color: $primary-background-light;
     p {
       color: $primary-text-light;
+    }
+  }
+  .title {
+    .headings {
+      h2 {
+        font-size: 15rem;
+        line-height: 10rem;
+        color: $primary-text-dark;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: $primary-text-dark;
+        @media screen and (max-width: 991px) {
+          -webkit-text-stroke-width: 2px;
+          font-size: 3.5rem;
+          line-height: 4rem;
+        }
+      }
     }
   }
   .primary-button {

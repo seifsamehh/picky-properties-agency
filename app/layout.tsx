@@ -1,15 +1,16 @@
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { Providers } from "./providers";
 import { Parallax } from "./parallax";
 import LoadingPage from "@/shared/LoadingPage";
 import "./globals.css";
 import "../styles/palettes.scss";
 import Header from "@/shared/Header";
+import Grid from "@/shared/Grid";
 
-const openSans = Open_Sans({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -182,10 +183,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={roboto.className}>
         <LoadingPage />
         <Providers>
           <Parallax>
+            <Grid />
             <Header />
             {children}
             <Analytics />

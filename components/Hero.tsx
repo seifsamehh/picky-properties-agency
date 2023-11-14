@@ -3,8 +3,8 @@ import TourBtn from "@/lib/TourBtn";
 import Image from "next/image";
 import localFont from "next/font/local";
 
-const aldhabi = localFont({
-  src: "../public/fonts/Aldhabi.ttf",
+const custom = localFont({
+  src: "../public/fonts/custom.ttf",
   display: "swap",
 });
 
@@ -26,7 +26,7 @@ export default function Hero() {
         loading="lazy"
       />
       <h1
-        className={`${aldhabi.className} text-center min-[290px]:text-7xl md:text-[15rem] leading-[12rem] uppercase font-black`}
+        className={`${custom.className} text-center min-[290px]:text-5xl md:text-9xl leading-[12rem] font-black`}
       >
         Picky Properties
       </h1>

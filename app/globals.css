@@ -52,6 +52,30 @@ button {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .about svg {
+    width: 200%;
+  }
+}
+
+.grid-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4 {
+  width: 0.1rem;
+  background-color: #00b4d83f;
+}
+
 ::webkit-scrollbar {
   width: 0;
 }
