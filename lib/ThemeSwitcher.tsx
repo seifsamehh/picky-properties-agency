@@ -24,16 +24,20 @@ export function ThemeSwitcher() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant="faded" id="theme-switcher">
+        <Button variant="faded" id="ThemeSwitcher" aria-label="Theme">
           Theme
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem key="light" textValue="light" startContent={<BiSun />}>
-          <button onClick={() => setTheme("light")}>Light Mode</button>
+          <button onClick={() => setTheme("light")} aria-label="light">
+            Light Mode
+          </button>
         </DropdownItem>
         <DropdownItem key="dark" textValue="dark" startContent={<BiMoon />}>
-          <button onClick={() => setTheme("dark")}>Dark Mode</button>
+          <button onClick={() => setTheme("dark")} aria-label="dark">
+            Dark Mode
+          </button>
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>
