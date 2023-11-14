@@ -10,8 +10,8 @@ const custom = localFont({
 
 export default function Title() {
   const { scrollYProgress } = useScroll();
-  const xLeft = useTransform(scrollYProgress, [0, 1], [-300, 0]);
-  const xRight = useTransform(scrollYProgress, [0, 1], [300, 0]);
+  const xLeft = useTransform(scrollYProgress, [0, 1], [-200, 0]);
+  const xRight = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
   return (
     <section className="title min-h-[50vh] overflow-hidden flex justify-around items-center">
