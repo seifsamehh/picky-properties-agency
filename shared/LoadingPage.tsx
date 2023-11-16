@@ -6,43 +6,127 @@ import Image from "next/image";
 export default function LoadingPage() {
   return (
     <motion.section
-      className="loading flex justify-center items-center flex-col gap-4 h-screen fixed inset-0 z-50"
+      className="loading flex justify-center items-center overflow-hidden flex-col gap-4 h-screen fixed inset-0 z-50"
       initial={{ height: "100vh" }}
       animate={{ height: 0, top: "-150vh" }}
-      transition={{ duration: 3, ease: "easeInOut", delay: 11 }}
+      transition={{ duration: 3, ease: "easeInOut", delay: 3 }}
     >
       <Image
-        src={"/assets/logo-white.png"}
+        src="/assets/animatedLogo.gif"
         alt="logo"
+        className="relative z-10"
         aria-label="logo"
         title="logo"
-        width={200}
-        height={200}
+        width={600}
+        height={600}
         priority={true}
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM89eFHPQAIcQMzAVtK4gAAAABJRU5ErkJggg=="
       />
-      <motion.svg
-        width="100%"
-        height="auto"
-        viewBox="0 0 984 250"
-        fill="none"
+      <svg
         xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        className="absolute top-0 left-0"
       >
-        <motion.path
-          id="path"
-          initial={{ pathLength: 0, strokeDashoffset: "3583.49px" }}
-          animate={{ pathLength: 1, strokeDashoffset: "0px" }}
-          transition={{
-            repeat: Infinity, // Animates the path indefinitely
-            repeatType: "reverse", // Reverses the animation after each cycle
-            ease: "easeInOut", // Uses a linear easing function for smooth transition
-            duration: 10, // Duration of each cycle
-          }}
-          d="M-5.72205e-06 248H39.7333C41.9425 248 43.7333 246.209 43.7333 244V136.512C43.7333 135.297 44.2858 134.148 45.2349 133.389L81.6515 104.261C84.2706 102.166 88.15 104.031 88.15 107.385V244C88.15 246.209 89.9409 248 92.15 248H120.708C122.917 248 124.708 246.209 124.708 244V161.135C124.708 158.926 126.499 157.135 128.708 157.135H177.767C179.976 157.135 181.767 158.926 181.767 161.135V244C181.767 246.209 183.558 248 185.767 248H213.983C216.192 248 217.983 246.209 217.983 244V81.591C217.983 80.53 218.405 79.5124 219.155 78.7623L252.055 45.8689C253.617 44.3072 256.149 44.3072 257.711 45.8689L290.611 78.7623C291.362 79.5124 291.783 80.53 291.783 81.591V244C291.783 246.209 293.574 248 295.783 248H321.95C324.159 248 325.95 246.209 325.95 244V191.879C325.95 189.67 327.741 187.879 329.95 187.879H371.15C373.359 187.879 375.15 189.67 375.15 191.879V244C375.15 246.209 376.941 248 379.15 248H406.683C408.892 248 410.683 246.209 410.683 244V144.738C410.683 142.529 412.474 140.738 414.683 140.738H422.467C423.13 140.738 423.667 140.201 423.667 139.539V139.539C423.667 117.185 441.788 99.0634 464.142 99.0634H474.106C474.931 99.0634 475.6 99.7325 475.6 100.558V136.738C475.6 138.947 477.391 140.738 479.6 140.738H484.583C486.792 140.738 488.583 142.529 488.583 144.738V244C488.583 246.209 490.374 248 492.583 248H518.75C520.959 248 522.75 246.209 522.75 244V52.6968C522.75 49.1334 527.058 47.3486 529.578 49.8681L566.678 86.9606C567.428 87.7108 567.85 88.7283 567.85 89.7893V244C567.85 246.209 569.641 248 571.85 248H594.6C596.809 248 598.6 246.209 598.6 244V186.413C598.6 184.204 600.391 182.413 602.6 182.413H652C654.209 182.413 656 184.204 656 186.413V244C656 246.209 657.791 248 660 248H682.75C684.959 248 686.75 246.209 686.75 244V33.7673C686.75 32.7063 687.172 31.6887 687.922 30.9386L716.039 2.82757C717.601 1.26585 720.133 1.26585 721.695 2.82757L749.811 30.9386C750.562 31.6887 750.983 32.7063 750.983 33.7673V244C750.983 246.209 752.774 248 754.983 248H779.1C781.309 248 783.1 246.209 783.1 244V173.88C783.1 156.708 797.02 142.788 814.192 142.788V142.788C831.363 142.788 845.283 156.708 845.283 173.88V244C845.283 246.209 847.074 248 849.283 248H868.617C870.826 248 872.617 246.209 872.617 244V104.43C872.617 102.221 874.408 100.43 876.617 100.43H936.267C938.476 100.43 940.267 102.221 940.267 104.43V244C940.267 246.209 942.058 248 944.267 248H984"
-          strokeWidth="2.5"
-        ></motion.path>
-      </motion.svg>
+        <defs>
+          <linearGradient
+            id="a"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            x2="0"
+            y1="0"
+            y2="100%"
+            gradientTransform="rotate(240)"
+          >
+            <stop offset="0" stopColor="#CAF0F8" />
+            <stop offset="1" stopColor="#0077B6" />
+          </linearGradient>
+          <pattern
+            patternUnits="userSpaceOnUse"
+            id="b"
+            width="540"
+            height="450"
+            x="0"
+            y="0"
+            viewBox="0 0 1080 900"
+          >
+            <g fillOpacity="0.1">
+              <polygon fill="#444" points="90 150 0 300 180 300" />
+              <polygon points="90 150 180 0 0 0" />
+              <polygon fill="#AAA" points="270 150 360 0 180 0" />
+              <polygon fill="#DDD" points="450 150 360 300 540 300" />
+              <polygon fill="#999" points="450 150 540 0 360 0" />
+              <polygon points="630 150 540 300 720 300" />
+              <polygon fill="#DDD" points="630 150 720 0 540 0" />
+              <polygon fill="#444" points="810 150 720 300 900 300" />
+              <polygon fill="#FFF" points="810 150 900 0 720 0" />
+              <polygon fill="#DDD" points="990 150 900 300 1080 300" />
+              <polygon fill="#444" points="990 150 1080 0 900 0" />
+              <polygon fill="#DDD" points="90 450 0 600 180 600" />
+              <polygon points="90 450 180 300 0 300" />
+              <polygon fill="#666" points="270 450 180 600 360 600" />
+              <polygon fill="#AAA" points="270 450 360 300 180 300" />
+              <polygon fill="#DDD" points="450 450 360 600 540 600" />
+              <polygon fill="#999" points="450 450 540 300 360 300" />
+              <polygon fill="#999" points="630 450 540 600 720 600" />
+              <polygon fill="#FFF" points="630 450 720 300 540 300" />
+              <polygon points="810 450 720 600 900 600" />
+              <polygon fill="#DDD" points="810 450 900 300 720 300" />
+              <polygon fill="#AAA" points="990 450 900 600 1080 600" />
+              <polygon fill="#444" points="990 450 1080 300 900 300" />
+              <polygon fill="#222" points="90 750 0 900 180 900" />
+              <polygon points="270 750 180 900 360 900" />
+              <polygon fill="#DDD" points="270 750 360 600 180 600" />
+              <polygon points="450 750 540 600 360 600" />
+              <polygon points="630 750 540 900 720 900" />
+              <polygon fill="#444" points="630 750 720 600 540 600" />
+              <polygon fill="#AAA" points="810 750 720 900 900 900" />
+              <polygon fill="#666" points="810 750 900 600 720 600" />
+              <polygon fill="#999" points="990 750 900 900 1080 900" />
+              <polygon fill="#999" points="180 0 90 150 270 150" />
+              <polygon fill="#444" points="360 0 270 150 450 150" />
+              <polygon fill="#FFF" points="540 0 450 150 630 150" />
+              <polygon points="900 0 810 150 990 150" />
+              <polygon fill="#222" points="0 300 -90 450 90 450" />
+              <polygon fill="#FFF" points="0 300 90 150 -90 150" />
+              <polygon fill="#FFF" points="180 300 90 450 270 450" />
+              <polygon fill="#666" points="180 300 270 150 90 150" />
+              <polygon fill="#222" points="360 300 270 450 450 450" />
+              <polygon fill="#FFF" points="360 300 450 150 270 150" />
+              <polygon fill="#444" points="540 300 450 450 630 450" />
+              <polygon fill="#222" points="540 300 630 150 450 150" />
+              <polygon fill="#AAA" points="720 300 630 450 810 450" />
+              <polygon fill="#666" points="720 300 810 150 630 150" />
+              <polygon fill="#FFF" points="900 300 810 450 990 450" />
+              <polygon fill="#999" points="900 300 990 150 810 150" />
+              <polygon points="0 600 -90 750 90 750" />
+              <polygon fill="#666" points="0 600 90 450 -90 450" />
+              <polygon fill="#AAA" points="180 600 90 750 270 750" />
+              <polygon fill="#444" points="180 600 270 450 90 450" />
+              <polygon fill="#444" points="360 600 270 750 450 750" />
+              <polygon fill="#999" points="360 600 450 450 270 450" />
+              <polygon fill="#666" points="540 600 630 450 450 450" />
+              <polygon fill="#222" points="720 600 630 750 810 750" />
+              <polygon fill="#FFF" points="900 600 810 750 990 750" />
+              <polygon fill="#222" points="900 600 990 450 810 450" />
+              <polygon fill="#DDD" points="0 900 90 750 -90 750" />
+              <polygon fill="#444" points="180 900 270 750 90 750" />
+              <polygon fill="#FFF" points="360 900 450 750 270 750" />
+              <polygon fill="#AAA" points="540 900 630 750 450 750" />
+              <polygon fill="#FFF" points="720 900 810 750 630 750" />
+              <polygon fill="#222" points="900 900 990 750 810 750" />
+              <polygon fill="#222" points="1080 300 990 450 1170 450" />
+              <polygon fill="#FFF" points="1080 300 1170 150 990 150" />
+              <polygon points="1080 600 990 750 1170 750" />
+              <polygon fill="#666" points="1080 600 1170 450 990 450" />
+              <polygon fill="#DDD" points="1080 900 1170 750 990 750" />
+            </g>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" fill="url(#a)" width="100%" height="100%" />
+        <rect x="0" y="0" fill="url(#b)" width="100%" height="100%" />
+      </svg>
     </motion.section>
   );
 }

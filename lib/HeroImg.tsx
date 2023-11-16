@@ -7,7 +7,7 @@ export default function HeroImg() {
   return (
     <ScrollParallax isAbsolutelyPositioned strength={-0.6} zIndex={-1}>
       <Image
-        src="/assets/HeroIcon.webp"
+        src="/assets/hollow-triangle.webp"
         alt="hero image"
         aria-label="hero image"
         className="hero-img absolute"
