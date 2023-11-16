@@ -86,7 +86,7 @@ export default function TourBtn() {
           },
         },
         {
-          element: "#ThemeSwitcher",
+          element: "#switch",
           popover: {
             title: "Theme",
             description: "Here you can change the theme.",
