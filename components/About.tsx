@@ -41,7 +41,7 @@ export default function About() {
       id="about-us"
     >
       <motion.svg
-        className="w-52 h-52 absolute top-0 left-8"
+        className="w-52 h-52 absolute top-0 left-8 min-[290px]:hidden md:block"
         viewBox="0 0 64 68"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
