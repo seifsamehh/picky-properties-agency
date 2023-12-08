@@ -1,122 +1,206 @@
-// Light Mode Palette
-$primary-background-light: #caf0f8;
-$primary-text-light: #03045e;
-$accent-1-light: #0077b6;
-$accent-2-light: #00b4d8;
-$accent-3-light: #90e0ff;
+// Light Mode Color Palette
 
-// Dark Mode Palette
-$primary-background-dark: #03045e;
-$primary-text-dark: #caf0f8;
-$accent-1-dark: #0077b6;
-$accent-2-dark: #00b4d8;
-$accent-3-dark: #90e0ff;
+$secondary-color: #638ecb; // Use for secondary buttons, links, and accent elements
+$accent-color-1: #8aaee0; // Use for call-to-action buttons and interactive elements
+$background-color: #f0f3fa; // Use for overall background of the application
+$text-color: #395086; // Use for general text, paragraphs, and body content
 
-@mixin light-mode {
-  background-color: $primary-background-light;
-  color: $primary-text-light;
-  // Add more styles as needed
-}
+// Dark Mode Color Palette
 
-@mixin dark-mode {
-  background-color: $primary-background-dark;
-  color: $primary-text-dark;
-  // Add more styles as needed
-}
+$secondary-color-dark: #d5deef; // Use for secondary buttons, links, and accent elements in dark mode
+$accent-color-1-dark: #8aaee0; // Use for call-to-action buttons and interactive elements in dark mode
+$background-color-dark: #395086; // Use for overall background of the application in dark mode
+$text-color-dark: #f0f3fa; // Use for general text, paragraphs, and body content in dark mode
 
 .light {
-  @include light-mode;
-  .nav {
-    background-color: $primary-background-light;
-    p {
-      color: $primary-text-light;
+  background-color: $background-color;
+  color: $text-color;
+  .nav-lg,
+  .nav-sm {
+    background-color: transparent;
+    a {
+      color: $text-color;
     }
   }
-  .title {
-    .headings {
-      h2 {
-        font-size: 15rem;
-        line-height: 10rem;
-        color: $primary-text-light;
-        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: $primary-text-light;
-        @media screen and (max-width: 991px) {
-          -webkit-text-stroke-width: 2px;
-          font-size: 3.5rem;
-          line-height: 4rem;
-        }
+  .nav-lg {
+    button {
+      background-color: $secondary-color;
+      color: #1f1e1e;
+    }
+  }
+  .menu li a {
+    font-size: 2rem;
+    color: $text-color;
+  }
+  .heroo {
+    .lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      margin: auto;
+      width: 90vw;
+    }
+
+    .line {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgba(138, 174, 224, 0.1);
+      overflow: hidden;
+    }
+    .line::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(138, 174, 224, 0) 0%,
+        #8aaee0 75%,
+        #8aaee0 100%
+      );
+      -webkit-animation: drop 7s 0s infinite;
+      animation: drop 7s 0s infinite;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    .line:nth-child(1) {
+      margin-left: -25%;
+    }
+    .line:nth-child(1)::after {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+    .line:nth-child(3) {
+      margin-left: 25%;
+    }
+    .line:nth-child(3)::after {
+      -webkit-animation-delay: 2.5s;
+      animation-delay: 2.5s;
+    }
+
+    @-webkit-keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
       }
     }
-  }
-  .primary-button {
-    background-color: $accent-1-light;
-    color: white;
 
-    &:hover {
-      background-color: darken($accent-1-light, 10%);
-      // Add more hover styles as needed
+    @keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
+      }
     }
-  }
-  .secondary-button {
-    background-color: $accent-2-light;
-    color: $primary-background-dark;
-
-    &:hover {
-      background-color: darken($accent-2-light, 10%);
-      // Add more hover styles as needed
-    }
-  }
-  ::selection {
-    background-color: $primary-background-dark;
-    color: $primary-text-dark;
   }
 }
+
 .dark {
-  @include dark-mode;
-  .nav {
-    background-color: $primary-background-light;
-    p {
-      color: $primary-text-light;
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+  .nav-lg,
+  .nav-sm {
+    background-color: $background-color;
+    color: $text-color;
+    a {
+      color: $text-color;
     }
   }
-  .title {
-    .headings {
-      h2 {
-        font-size: 15rem;
-        line-height: 10rem;
-        color: $primary-text-dark;
-        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: $primary-text-dark;
-        @media screen and (max-width: 991px) {
-          -webkit-text-stroke-width: 2px;
-          font-size: 3.5rem;
-          line-height: 4rem;
-        }
+  .nav-lg {
+    button {
+      background-color: $secondary-color;
+      color: #1f1e1e;
+    }
+  }
+  .menu li a {
+    font-size: 2rem;
+    color: $text-color-dark;
+  }
+  .heroo {
+    .lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      margin: auto;
+      width: 90vw;
+    }
+
+    .line {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+    .line::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(240, 243, 250, 0) 0%,
+        #f0f3fa 75%,
+        #f0f3fa 100%
+      );
+      -webkit-animation: drop 7s 0s infinite;
+      animation: drop 7s 0s infinite;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    .line:nth-child(1) {
+      margin-left: -25%;
+    }
+    .line:nth-child(1)::after {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+    .line:nth-child(3) {
+      margin-left: 25%;
+    }
+    .line:nth-child(3)::after {
+      -webkit-animation-delay: 2.5s;
+      animation-delay: 2.5s;
+    }
+
+    @-webkit-keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
       }
     }
-  }
-  .primary-button {
-    background-color: $accent-1-dark;
-    color: white;
 
-    &:hover {
-      background-color: darken($accent-1-dark, 10%);
-      // Add more hover styles as needed
+    @keyframes drop {
+      0% {
+        top: -50%;
+      }
+      100% {
+        top: 110%;
+      }
     }
-  }
-  .secondary-button {
-    background-color: $accent-2-dark;
-    color: $primary-background-light;
-
-    &:hover {
-      background-color: darken($accent-2-dark, 10%);
-      // Add more hover styles as needed
-    }
-  }
-  ::selection {
-    background-color: $primary-background-light;
-    color: $primary-text-light;
   }
 }

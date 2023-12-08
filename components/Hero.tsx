@@ -1,37 +1,54 @@
-import HeroImg from "@/lib/HeroImg";
-import TourBtn from "@/lib/TourBtn";
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Chip } from "@nextui-org/react";
 import localFont from "next/font/local";
 
 const custom = localFont({
-  src: "../public/fonts/custom.ttf",
+  src: [
+    {
+      path: "../public/fonts/custom.woff2",
+    },
+    {
+      path: "../public/fonts/custom.ttf",
+    },
+  ],
   display: "swap",
 });
 
 export default function Hero() {
   return (
-    <section
-      className="hero flex justify-center items-center flex-col min-[290px]:h-[70vh] md:min-h-screen overflow-hidden relative"
-      id="hero"
-    >
-      <p className="min-[290px]:text-xl md:text-2xl text-center">
-        Real Estate Marketing
-      </p>
-      <Image
-        src="/assets/Underline-1.svg"
-        alt="underline"
-        aria-label="underline"
-        width={400}
-        height={400}
-        loading="lazy"
-      />
-      <h1
-        className={`${custom.className} text-center min-[290px]:text-5xl md:text-9xl leading-[12rem] font-black`}
+    <section className="heroo overflow-hidden min-h-screen relative flex justify-center items-center">
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      <div className="hero-content">
+        <motion.h1
+          className={`${custom.className} min-[290px]:text-6xl md:text-9xl`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 1.5 }}
+        >
+          Picky
+        </motion.h1>
+        <motion.h2
+          className={`${custom.className} min-[290px]:text-6xl md:text-9xl`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 2 }}
+        >
+          Properties
+        </motion.h2>
+      </div>
+      <Chip
+        color="primary"
+        variant="flat"
+        className="absolute bottom-24 left-auto dark:text-black dark:bg-[#8aaee0]"
       >
-        Picky Properties
-      </h1>
-      <TourBtn />
-      <HeroImg />
+        Scroll To Start Our Journey
+      </Chip>
     </section>
   );
 }

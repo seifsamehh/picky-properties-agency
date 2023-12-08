@@ -8,7 +8,6 @@ import LoadingPage from "@/shared/LoadingPage";
 import "./globals.css";
 import "../styles/palettes.scss";
 import Header from "@/shared/Header";
-import Grid from "@/shared/Grid";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -187,7 +186,6 @@ export default function RootLayout({
         <LoadingPage />
         <Providers>
           <Parallax>
-            <Grid />
             <Header />
             {children}
             <Analytics />
