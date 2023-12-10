@@ -31,21 +31,21 @@ export default function Header() {
         </NavbarBrand>
         <NavbarContent className="flex gap-4" justify="center">
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
+            <Link href="/" aria-current="page">
               Home
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#">Our Story</Link>
+            <Link href="/our-story">Our Story</Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#">Services</Link>
+            <Link href="/services">Services</Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#">Cooperated With</Link>
+            <Link href="/cooperated">Cooperated With</Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#">CTA</Link>
+            <Link href="/cta">CTA</Link>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
@@ -76,19 +76,19 @@ export default function Header() {
           />
           <NavbarMenu className="menu">
             <NavbarMenuItem>
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
             </NavbarMenuItem>
             <NavbarMenuItem>
-              <Link href="#">Our Story</Link>
+              <Link href="/our-story">Our Story</Link>
             </NavbarMenuItem>
             <NavbarMenuItem>
-              <Link href="#">Services</Link>
+              <Link href="/services">Services</Link>
             </NavbarMenuItem>
             <NavbarMenuItem>
-              <Link href="#">Cooperated With</Link>
+              <Link href="/cooperated">Cooperated With</Link>
             </NavbarMenuItem>
             <NavbarMenuItem>
-              <Link href="#">CTA</Link>
+              <Link href="/cta">CTA</Link>
             </NavbarMenuItem>
             <NavbarMenuItem>
               <ThemeSwitcher />
