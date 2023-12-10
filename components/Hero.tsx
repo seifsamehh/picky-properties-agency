@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Chip } from "@nextui-org/react";
 import localFont from "next/font/local";
 
@@ -17,6 +17,8 @@ const custom = localFont({
 });
 
 export default function Hero() {
+  const { scrollYProgress } = useScroll();
+  const translateY = useTransform(scrollYProgress, [0, 1], ["0", "-100px"]);
   return (
     <section className="heroo overflow-hidden min-h-screen relative flex justify-center items-center">
       <div className="lines">
@@ -24,9 +26,9 @@ export default function Hero() {
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      <div className="hero-content">
+      <motion.div className="hero-content" style={{ translateY }}>
         <motion.h1
-          className={`${custom.className} min-[290px]:text-6xl md:text-9xl`}
+          className={`${custom.className} min-[290px]:text-6xl md:text-9xl min-[290px]:text-center md:text-left`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 1.5 }}
@@ -34,14 +36,14 @@ export default function Hero() {
           Picky
         </motion.h1>
         <motion.h2
-          className={`${custom.className} min-[290px]:text-6xl md:text-9xl`}
+          className={`${custom.className} min-[290px]:text-6xl md:text-9xl min-[290px]:text-center md:text-left`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 2 }}
         >
           Properties
         </motion.h2>
-      </div>
+      </motion.div>
       <Chip
         color="primary"
         variant="flat"

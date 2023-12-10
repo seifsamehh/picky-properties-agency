@@ -37,7 +37,7 @@ button {
 .slide-out,
 .slide-out-2,
 .slide-out-3 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,7 +69,8 @@ button {
 }
 .menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
+  gap: 3rem;
 }
 /* end global components */
