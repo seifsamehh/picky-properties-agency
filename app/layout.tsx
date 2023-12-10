@@ -8,6 +8,7 @@ import LoadingPage from "@/shared/LoadingPage";
 import "./globals.css";
 import "../styles/palettes.scss";
 import Header from "@/shared/Header";
+import Head from "next/head";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -182,6 +183,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/custom.woff2"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/ttf"
+          href="/fonts/custom.ttf"
+        />
+      </Head>
       <body className={roboto.className}>
         <LoadingPage />
         <Providers>
