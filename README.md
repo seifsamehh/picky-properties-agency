@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">Picky Properties</h1>
 
-## Getting Started
+<p align="center"><img src="https://i.imgur.com/CaC0g6n.png" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">We are part of byotat real estate. Byotat is a leading companyin thhe field of real estate marketing. Projects marketing and marketing consultancy.</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2>🚀 Demo</h2>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[https://picky-properties-agency.vercel.app/](https://picky-properties-agency.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h2>Project Screenshots:</h2>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<img src="https://i.imgur.com/SpCkeEN.png" alt="project-screenshot" width="900" height="500/">
 
-## Learn More
+<img src="https://i.imgur.com/gBaKqvj.png" alt="project-screenshot" width="900" height="500/">
 
-To learn more about Next.js, take a look at the following resources:
+<img src="https://i.imgur.com/wzo1Vyr.png" alt="project-screenshot" width="900" height="500/">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="https://i.imgur.com/kiBfOl5.png" alt="project-screenshot" width="900" height="500/">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img src="https://i.imgur.com/D9AthbX.png" alt="project-screenshot" width="900" height="500/">
 
-## Deploy on Vercel
+<img src="https://i.imgur.com/pn9AHN8.png" alt="project-screenshot" width="900" height="500/">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  
+  
+<h2>🧐 Features</h2>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here're some of the project's best features:
+
+*   Light & Dark modes
+*   Fully Responsive
+*   Customer Service
+*   Parallax Effects
+*   Animation OnScroll
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   Next.js
+*   SCSS
+*   TypeScript
+*   next-ui
+*   TailwindCSS
+
+<h2>💖Like my work?</h2>
+
+Hey there I want you to know that you are stronger and more resilient than you may feel right now. Life has its ups and downs and it's completely okay to face challenges. You're not alone in this journey and reaching out for support is a sign of courage. Remember to be kind to yourself take things one step at a time and breathe. You have the strength within you to navigate through whatever comes your way. Embrace the support around you and know that brighter days are ahead. If you ever need someone to talk to or simply share your thoughts I'm here for you. You matter and your well-being is important. Take care and believe in the strength that resides within you.
