@@ -1,12 +1,30 @@
 "use client";
 
 import { ScrollParallax } from "react-just-parallax";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Catchy() {
+  useGSAP(() => {
+    gsap.to(".catchy-left", {
+      scrollTrigger: {
+        trigger: ".catchy-left",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        pin: true,
+      },
+      duration: 10,
+      ease: "none",
+    });
+  });
   return (
-    <section className="catchy min-h-screen overflow-hidden flex justify-around items-center min-[290px]:flex-wrap md:flex-nowrap">
-      <div className="left">
-        <p className="max-w-5xl text-5xl min-[290px]:text-center md:text-left">
+    <section className="catchy min-h-screen overflow-hidden flex justify-around items-start min-[290px]:flex-wrap md:flex-nowrap">
+      <div className="left catchy-left min-[290px]:h-full md:h-[70vh]">
+        <p className="max-w-5xl min-[290px]:text-3xl md:text-5xl min-[290px]:text-center md:text-left min-[290px]:px-4 md:px-0">
           You may see that all of these shades are blue, but this is not true
           because{" "}
           <span className="font-black text-[#638ecb] dark:text-[#6dcff6]">

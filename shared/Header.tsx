@@ -7,15 +7,27 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
 } from "@nextui-org/react";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Image from "next/image";
-import Link from "next/link";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleClickHome = () => {
+    gsap.to(window, { duration: 2, ease: "power4.out", scrollTo: "#home" });
+  };
+  const handleClickStory = () => {
+    gsap.to(window, { duration: 2, ease: "power4.out", scrollTo: "#story" });
+  };
+  const handleClickServices = () => {
+    gsap.to(window, { duration: 2, ease: "power4.out", scrollTo: "#services" });
+  };
+  const handleClickCta = () => {
+    gsap.to(window, { duration: 2, ease: "power4.out", scrollTo: "#cta" });
+  };
   return (
     <>
       <Navbar shouldHideOnScroll className="nav-lg">
@@ -24,28 +36,25 @@ export default function Header() {
             src="/assets/logo.png"
             alt="logo"
             aria-label="logo"
+            className="cursor-pointer"
             width={150}
             height={150}
             priority={true}
+            onClick={handleClickHome}
           />
         </NavbarBrand>
         <NavbarContent className="flex gap-4" justify="center">
           <NavbarItem isActive>
-            <Link href="/" aria-current="page">
-              Home
-            </Link>
+            <p onClick={handleClickHome}>Home</p>
           </NavbarItem>
           <NavbarItem>
-            <Link href="/our-story">Our Story</Link>
+            <p onClick={handleClickStory}>Our Story</p>
           </NavbarItem>
           <NavbarItem>
-            <Link href="/services">Services</Link>
+            <p onClick={handleClickServices}>Services</p>
           </NavbarItem>
           <NavbarItem>
-            <Link href="/cooperated">Cooperated With</Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link href="/cta">CTA</Link>
+            <p onClick={handleClickCta}>CTA</p>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
@@ -65,35 +74,17 @@ export default function Header() {
             src="/assets/logo.png"
             alt="logo"
             aria-label="logo"
+            className="cursor-pointer"
             width={150}
             height={150}
             priority={true}
+            onClick={handleClickHome}
           />
         </NavbarBrand>
         <NavbarContent justify="end">
-          <NavbarMenuToggle
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          />
-          <NavbarMenu className="menu">
-            <NavbarMenuItem>
-              <Link href="/">Home</Link>
-            </NavbarMenuItem>
-            <NavbarMenuItem>
-              <Link href="/our-story">Our Story</Link>
-            </NavbarMenuItem>
-            <NavbarMenuItem>
-              <Link href="/services">Services</Link>
-            </NavbarMenuItem>
-            <NavbarMenuItem>
-              <Link href="/cooperated">Cooperated With</Link>
-            </NavbarMenuItem>
-            <NavbarMenuItem>
-              <Link href="/cta">CTA</Link>
-            </NavbarMenuItem>
-            <NavbarMenuItem>
-              <ThemeSwitcher />
-            </NavbarMenuItem>
-          </NavbarMenu>
+          <NavbarItem>
+            <ThemeSwitcher />
+          </NavbarItem>
         </NavbarContent>
       </Navbar>
     </>

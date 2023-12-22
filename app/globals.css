@@ -73,4 +73,74 @@ button {
   align-items: flex-start;
   gap: 3rem;
 }
+.footer {
+  background-image: url("../public/assets/bbblurry.svg");
+  background-position: 100% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+  }
+}
+.footer h6 {
+  font-size: 2rem;
+  border-bottom: 2px solid #6dcff6;
+  margin-bottom: 1rem;
+}
+.footer .top h4 {
+  font-size: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .footer .top h4 {
+    font-size: 2rem;
+  }
+}
+.footer .middle .middle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .footer .middle .middle-content {
+    gap: 3rem;
+  }
+}
+.footer .middle .middle-content .cta h5 {
+  font-size: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .footer .middle .middle-content .cta h5 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .middle .middle-content .cta {
+    margin-top: 2rem;
+  }
+}
+.footer .middle .middle-content .informations {
+  width: 90vw;
+}
+.footer .middle .middle-content .informations .social .social-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90vw;
+}
+@media screen and (max-width: 768px) {
+  .footer .bottom {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+}
+.footer .bottom p a {
+  font-size: 1.5rem;
+}
 /* end global components */

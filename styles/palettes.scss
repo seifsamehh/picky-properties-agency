@@ -18,17 +18,18 @@ $text-color-dark: #f0f3fa; // Use for general text, paragraphs, and body content
   .nav-lg,
   .nav-sm {
     background-color: transparent;
-    a {
+    p {
       color: $text-color;
+      cursor: pointer;
     }
   }
   .nav-lg {
     button {
       background-color: $secondary-color;
-      color: #1f1e1e;
+      color: $text-color-dark;
     }
   }
-  .menu li a {
+  .menu li p {
     font-size: 2rem;
     color: $text-color;
   }
@@ -115,17 +116,18 @@ $text-color-dark: #f0f3fa; // Use for general text, paragraphs, and body content
   .nav-sm {
     background-color: $background-color;
     color: $text-color;
-    a {
+    p {
       color: $text-color;
+      cursor: pointer;
     }
   }
   .nav-lg {
     button {
       background-color: $secondary-color;
-      color: #1f1e1e;
+      color: $text-color-dark;
     }
   }
-  .menu li a {
+  .menu li p {
     font-size: 2rem;
     color: $text-color-dark;
   }
