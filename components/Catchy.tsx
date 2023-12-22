@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Catchy() {
   useGSAP(() => {
-    gsap.to(".catchy-left", {
+    gsap.to("#catchy-left", {
       scrollTrigger: {
-        trigger: ".catchy-left",
+        trigger: "#catchy-left",
         start: "top center",
         end: "bottom center",
         scrub: true,
@@ -23,7 +23,7 @@ export default function Catchy() {
   });
   return (
     <section className="catchy min-h-screen overflow-hidden flex justify-around items-start min-[290px]:flex-wrap md:flex-nowrap">
-      <div className="left catchy-left min-[290px]:h-full md:h-[70vh]">
+      <div className="left min-[290px]:h-full md:h-[70vh]" id="catchy-left">
         <p className="max-w-5xl min-[290px]:text-3xl md:text-5xl min-[290px]:text-center md:text-left min-[290px]:px-4 md:px-0">
           You may see that all of these shades are blue, but this is not true
           because{" "}

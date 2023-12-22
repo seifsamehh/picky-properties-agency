@@ -15,7 +15,6 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleClickHome = () => {
     gsap.to(window, { duration: 2, ease: "power4.out", scrollTo: "#home" });
   };
@@ -64,11 +63,7 @@ export default function Header() {
         </NavbarContent>
       </Navbar>
       {/* small screen */}
-      <Navbar
-        shouldHideOnScroll
-        onMenuOpenChange={setIsMenuOpen}
-        className="nav-sm"
-      >
+      <Navbar shouldHideOnScroll className="nav-sm">
         <NavbarBrand>
           <Image
             src="/assets/logo.png"

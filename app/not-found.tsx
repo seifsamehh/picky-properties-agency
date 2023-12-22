@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 export default function NotFound() {
+  const headingText = "404";
+  const subheadingText = "Oops! That page can’t be found";
+  const paragraphText = "The page you are looking for may be deleted";
+
   return (
     <section className="fixed z-[100] inset-0 min-h-screen w-screen flex justify-center items-center flex-col overflow-hidden bg-[#03045e]">
       <div className="container mx-auto">
@@ -8,14 +12,12 @@ export default function NotFound() {
           <div className="w-full px-4">
             <div className="mx-auto max-w-[400px] text-center">
               <h2 className="mb-2 text-[50px] font-bold leading-none text-white sm:text-[80px] md:text-[100px]">
-                404
+                {headingText}
               </h2>
               <h4 className="mb-3 text-[22px] font-semibold leading-tight text-white">
-                Oops! That page can’t be found
+                {subheadingText}
               </h4>
-              <p className="mb-8 text-lg text-white">
-                The page you are looking for it maybe deleted
-              </p>
+              <p className="mb-8 text-lg text-white">{paragraphText}</p>
               <Link
                 href="/"
                 title="home"

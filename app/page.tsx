@@ -1,8 +1,11 @@
-import Hero from "@/components/Hero";
-import Catchy from "@/components/Catchy";
-import Story from "@/components/Story";
-import Services from "@/components/Services";
-import Message from "@/components/Message";
+import dynamic from "next/dynamic";
+
+// Code Splitting: Lazy load components
+const Hero = dynamic(() => import("@/components/Hero"));
+const Catchy = dynamic(() => import("@/components/Catchy"));
+const Story = dynamic(() => import("@/components/Story"));
+const Services = dynamic(() => import("@/components/Services"));
+const Message = dynamic(() => import("@/components/Message"));
 
 export default function Home() {
   return (

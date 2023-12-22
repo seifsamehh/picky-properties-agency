@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Message() {
   useGSAP(() => {
     gsap.fromTo(
-      ".para",
+      "#para",
       {
         opacity: 0,
       },
@@ -30,7 +30,7 @@ export default function Message() {
         stagger: 0.1,
         duration: 1,
         scrollTrigger: {
-          trigger: ".para",
+          trigger: "#para",
           start: "top center",
           end: "bottom center",
           scrub: true,
@@ -41,7 +41,10 @@ export default function Message() {
   return (
     <section className="message min-h-screen overflow-hidden flex justify-center items-center relative">
       <div className="message-content max-w-3xl flex flex-col gap-10 min-[290px]:p-4 md:p-0">
-        <p className="para min-[290px]:text-xl md:text-3xl min-[290px]:text-center md:text-left">
+        <p
+          className="min-[290px]:text-xl md:text-3xl min-[290px]:text-center md:text-left"
+          id="para"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           ratione accusamus ut vitae ipsam eaque sapiente consectetur maiores
           nulla! Voluptatem pariatur delectus officiis ratione cumque

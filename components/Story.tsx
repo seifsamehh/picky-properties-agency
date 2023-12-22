@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Story() {
   useGSAP(() => {
-    gsap.to(".logo-pin", {
+    gsap.to("#logo-pin", {
       scrollTrigger: {
-        trigger: ".logo-pin",
+        trigger: "#logo-pin",
         start: "top center",
         end: "bottom center",
         scrub: true,
@@ -76,7 +76,10 @@ export default function Story() {
             </p>
           </div>
         </div>
-        <div className="middle logo-pin min-h-[80vh] min-[290px]:hidden 2xl:block">
+        <div
+          className="middle min-h-[80vh] min-[290px]:hidden 2xl:block"
+          id="logo-pin"
+        >
           <Image
             src="/assets/logo.png"
             alt="logo"

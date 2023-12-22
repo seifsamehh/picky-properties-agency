@@ -1,39 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* start global components */
 *,
-*::before,
-*::after {
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 a,
-img,
-video,
 button,
 h1,
 h2,
-p {
+img,
+p,
+video {
   user-select: none;
 }
-
 a {
   text-decoration: none;
 }
-
 button {
   border: none;
-  outline: none;
+  outline: 0;
 }
-
 ::webkit-scrollbar {
   width: 0;
 }
-
 .slide-out,
 .slide-out-2,
 .slide-out-3 {
@@ -44,19 +37,15 @@ button {
   height: 100vh;
   transform-origin: left;
 }
-
 .slide-out {
   background-color: #d5deef;
 }
-
 .slide-out-2 {
   background-color: #638ecb;
 }
-
 .slide-out-3 {
   background-color: #395086;
 }
-
 @media screen and (max-width: 991px) {
   .nav-lg {
     display: none;
@@ -80,11 +69,6 @@ button {
   background-size: cover;
   padding: 2rem;
 }
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 1rem;
-  }
-}
 .footer h6 {
   font-size: 2rem;
   border-bottom: 2px solid #6dcff6;
@@ -93,33 +77,13 @@ button {
 .footer .top h4 {
   font-size: 5rem;
 }
-@media screen and (max-width: 768px) {
-  .footer .top h4 {
-    font-size: 2rem;
-  }
-}
 .footer .middle .middle-content {
   display: flex;
   flex-direction: column;
   gap: 6rem;
 }
-@media screen and (max-width: 768px) {
-  .footer .middle .middle-content {
-    gap: 3rem;
-  }
-}
 .footer .middle .middle-content .cta h5 {
   font-size: 4rem;
-}
-@media screen and (max-width: 768px) {
-  .footer .middle .middle-content .cta h5 {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .footer .middle .middle-content .cta {
-    margin-top: 2rem;
-  }
 }
 .footer .middle .middle-content .informations {
   width: 90vw;
@@ -135,6 +99,19 @@ button {
   width: 90vw;
 }
 @media screen and (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+  }
+  .footer .middle .middle-content .cta h5,
+  .footer .top h4 {
+    font-size: 2rem;
+  }
+  .footer .middle .middle-content {
+    gap: 3rem;
+  }
+  .footer .middle .middle-content .cta {
+    margin-top: 2rem;
+  }
   .footer .bottom {
     margin-top: 2rem;
     flex-wrap: wrap;
@@ -143,4 +120,3 @@ button {
 .footer .bottom p a {
   font-size: 1.5rem;
 }
-/* end global components */

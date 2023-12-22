@@ -24,7 +24,7 @@ export function ThemeSwitcher() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button variant="flat" id="hello-theme-dark-light" aria-label="Theme">
+        <Button variant="flat" aria-label="Theme">
           Theme
         </Button>
       </DropdownTrigger>

@@ -35,12 +35,12 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   useGSAP(() => {
-    gsap.from(".picky", {
+    gsap.from("#picky", {
       opacity: 0,
       y: 50,
       duration: 1,
       scrollTrigger: {
-        trigger: ".picky",
+        trigger: "#picky",
         start: "top 80%", // Adjust the start position according to your needs
         end: "bottom 20%", // Adjust the end position according to your needs
         scrub: true,
@@ -50,7 +50,7 @@ export default function Footer() {
   return (
     <footer className="footer min-h-screen overflow-hidden flex justify-around items-start flex-col p-8 bg-[#395086] text-[#f0f3fa] dark:bg-[#f0f3fa] dark:text-[#395086]">
       <div className="top">
-        <h4 className={`${custom.className} picky`}>
+        <h4 className={`${custom.className}`} id="picky">
           ( We are so picky about details... )
         </h4>
       </div>

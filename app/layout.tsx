@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { Suspense, lazy } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -6,10 +7,9 @@ import { Providers } from "./providers";
 import { Parallax } from "./parallax";
 import LoadingPage from "@/shared/LoadingPage";
 import Header from "@/shared/Header";
+import Footer from "@/shared/Footer";
 import "./globals.css";
 import "../styles/palettes.scss";
-import Footer from "@/shared/Footer";
-
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400"],
@@ -176,6 +176,7 @@ export const metadata: Metadata = {
   category: "real Estate Marketing",
 };
 
+const LazyFooter = lazy(() => import("@/shared/Footer"));
 export default function RootLayout({
   children,
 }: {
@@ -184,15 +185,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <LoadingPage />
-        <Providers>
-          <Parallax>
-            <Header />
-            {children}
-            <Footer />
-            <Analytics />
-          </Parallax>
-        </Providers>
+        <Suspense fallback={<LoadingPage />}>
+          <LoadingPage />
+          <Providers>
+            <Parallax>
+              <Header />
+              {children}
+              <LazyFooter />
+              <Analytics />
+            </Parallax>
+          </Providers>
+        </Suspense>
         <Script
           id="live chat"
           src="https://embed.tawk.to/655294cb958be55aeaaf47bb/1hf59afig"

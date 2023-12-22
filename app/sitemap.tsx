@@ -1,8 +1,10 @@
 export default function sitemap(): { url: string; lastModified: Date }[] {
-  return [
-    {
-      url: "https://picky-properties-agency.vercel.app/",
-      lastModified: new Date(),
-    },
-  ];
+  const currentDate = new Date();
+
+  const urls = ["https://picky-properties-agency.vercel.app/"];
+
+  return urls.map((url) => ({
+    url,
+    lastModified: currentDate,
+  }));
 }
