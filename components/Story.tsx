@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Chip } from "@nextui-org/react";
 import Image from "next/image";
-// import { ScrollParallax } from "react-just-parallax";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,12 +23,9 @@ export default function Story() {
     });
   });
   return (
-    <section
-      className="story min-h-screen overflow-hidden relative py-4"
-      id="story"
-    >
+    <section className="story min-h-screen overflow-hidden py-4" id="story">
       <div className="stroy-content flex justify-center items-start gap-6 min-[290px]:px-4 md:px-6 min-[290px]:flex-wrap md:flex-nowrap">
-        <div className="left max-w-3xl min-h-screen flex justify-between items-start flex-col gap-6">
+        <div className="left min-[290px]:max-w-3xl 2xl:max-w-2xl min-h-screen flex justify-between items-start flex-col gap-6">
           <div className="block-box min-[290px]:text-center md:text-left">
             <Chip
               color="primary"
@@ -77,7 +73,7 @@ export default function Story() {
           </div>
         </div>
         <div
-          className="middle min-h-[80vh] min-[290px]:hidden 2xl:block"
+          className="middle min-h-[80vh] w-96 min-[290px]:hidden min-[1700px]:block"
           id="logo-pin"
         >
           <Image
@@ -92,7 +88,7 @@ export default function Story() {
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
           />
         </div>
-        <div className="right max-w-3xl min-h-screen flex justify-between items-start flex-col gap-6">
+        <div className="right min-[290px]:max-w-3xl 2xl:max-w-2xl min-h-screen flex justify-between items-start flex-col gap-6">
           <div className="block-box min-[290px]:text-center md:text-left">
             <Chip
               color="primary"
